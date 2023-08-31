@@ -37,7 +37,7 @@ class CollectionViewController: UICollectionViewController {
             //no need to cast
             //if let name = self.imageModel.getImageName(for: indexPath.row) as? String{
             
-            var name = self.imageModel.getImageName(for: indexPath.row)
+            let name = self.imageModel.getImageName(for: indexPath.row)
             cell.imageView.image = self.imageModel.getImageWithName(name)
             
             return cell
