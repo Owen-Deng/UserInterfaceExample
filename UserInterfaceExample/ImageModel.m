@@ -40,7 +40,7 @@ NSMutableDictionary* _imageDict =  nil;
 }
 
 -(UIImage*)getImageWithName:(NSString*)name{
-    // Return the UIImage with specified image name
+    // Get the UIImage with specified image name
     if (!_imageDict){
         _imageDict = [[NSMutableDictionary alloc]init];
         for(int i = 0; i<self.imageNames.count; ++i)
@@ -52,7 +52,7 @@ NSMutableDictionary* _imageDict =  nil;
 }
 
 -(UIImage*)getImageWithIndex:(NSInteger)index{
-    // Return the UIImage with specified image index
+    // Get the UIImage at specified image index
     if (!_imageDict){
         _imageDict = [[NSMutableDictionary alloc]init];
         for(int i = 0; i<self.imageNames.count; ++i)
@@ -68,7 +68,7 @@ NSMutableDictionary* _imageDict =  nil;
 }
 
 -(NSString*)getImageNameForIndex:(NSInteger)index{
-    // Return the image name by index
+    // Get the image name by index
     return self.imageNames[index];
 }
 

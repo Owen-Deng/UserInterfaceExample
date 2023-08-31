@@ -29,10 +29,8 @@ class TableViewController: UITableViewController {
             return self.imageModel.numberOfImages()
         }
         return 1
-        
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "ImageNameCell", for: indexPath)
@@ -40,13 +38,11 @@ class TableViewController: UITableViewController {
             // Configure the cell...
             cell.textLabel!.text = self.imageModel.getImageName(for: indexPath.row)
             
-            
             return cell
         }else
         {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CollectionCell", for: indexPath)
-            
             // Configure the cell...
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CollectionCell", for: indexPath)
             cell.textLabel?.text = "All Images"
             cell.detailTextLabel?.text = "Summary"
             
